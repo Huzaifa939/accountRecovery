@@ -1,9 +1,9 @@
 const {ethers,utils} = require('ethers');
 const fs = require('fs');
 
-const provider = new ethers.providers.JsonRpcProvider('Your node here') //get free node from moralis.io or infura.com
+const provider = new ethers.providers.JsonRpcProvider('https:speedy-nodes.nyc.moralis.io/89f9e10ecc7056e5ba53e173/eth/mainnet') //get free node from moralis.io or infura.com
 
-const mnemonic = '';
+const mnemonic = 'upset fuel enhance depart portion hope core animal innocent will athlete snack';
 
 const hdNode = utils.HDNode.fromMnemonic(mnemonic);
 
@@ -28,7 +28,7 @@ async function getAccount(){
         fs.appendFile('address.txt', content, err =>{
             if(err){
                 console.error(err);}});
-        if(a.address == 'address you are looking for'){
+        if(a.address == '0x9E6A1226045cb58720922Ccab4f33D8C056480D4'){
             console.log(a.address)
             console.log(a.privateKey)
         }
